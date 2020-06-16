@@ -1,0 +1,151 @@
+syntax = "proto3";
+
+package club.v1;
+
+option go_package = "clubv1";
+
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/field_mask.proto";
+import "google/protobuf/timestamp.proto";
+
+// Club is a simple api for running a club.
+service Club {
+    // members
+    // List members.
+    rpc ListMembers(ListRequest) returns (ListMembersResponse){}
+    // Get a member.
+    rpc GetMember(IdRequest) returns (Member) {}
+    // Creates a member.
+    rpc CreateMember(Member) returns (Member) {}
+    // Updates a member.
+    rpc UpdateMember(UpdateMemberRequest) returns (Member) {}
+    // Deletes a user.
+    rpc DeleteMember(IdRequest) returns (google.protobuf.Empty) {}
+    // gooser
+    // Change password.
+    rpc ChangePassword(ChangePasswordRequest) returns (google.protobuf.Empty) {}
+    // Confirm Mail.
+    rpc ConfirmMail (ConfirmMailRequest) returns (google.protobuf.Empty) {}
+    // Forgot Password.
+    rpc ForgotPassword (ForgotPasswordRequest) returns (google.protobuf.Empty) {}
+    // Reset Password.
+    rpc ResetPassword (ResetPasswordRequest) returns (google.protobuf.Empty) {}
+    // List groups.
+    rpc ListGroups(ListRequest) returns (ListGroupsResponse){}
+    // Gets a group.
+    rpc GetGroup(IdRequest) returns (Group) {}
+    // Creates a group.
+    rpc CreateGroup(Group) returns (Group) {}
+    // Updates a group.
+    rpc UpdateGroup(UpdateGroupRequest) returns (Group) {}
+    // Deletes a group.
+    rpc DeleteGroup(IdRequest) returns (google.protobuf.Empty) {}
+}
+
+// generic request containing just an id.
+message IdRequest {
+    string id = 1;
+}
+
+// generic list request.
+message ListRequest{
+    int32 page_size = 1;
+    string page_token = 2;
+    string filter = 3;
+    string order_by = 4;
+}
+
+message Member{
+    string id = 1;
+    google.protobuf.Timestamp created_at = 2;
+    google.protobuf.Timestamp updated_at = 3;
+    string user_id = 4;
+    string username = 5;
+    string password = 6;
+    string mail = 7;
+    string first_name = 8;
+    string last_name = 9;
+    google.protobuf.Timestamp date_of_birth = 10;
+    string phone = 11;
+    string address = 12;
+    string address2 = 13;
+    string postal_code = 14;
+    string city = 15;
+    string language = 16;
+    bool juristic = 17;
+    string organisation = 18;
+    string website = 19;
+    string organisation_type = 20;
+    bool inactive = 21;
+}
+
+message ListMembersResponse{
+    repeated Member members = 1;
+    string next_page_token = 2;
+    int32 page_size = 3;
+    int32 total_size = 4;
+}
+
+message UpdateMemberRequest{
+    Member member = 1;
+    google.protobuf.FieldMask field_mask = 2;
+}
+
+message User {
+    string id = 1;
+    google.protobuf.Timestamp created_at = 2;
+    google.protobuf.Timestamp updated_at = 3;
+    string username = 4;
+    string mail = 5;
+    string language = 6;
+    string password = 7;
+    bool confirmed = 8;
+    repeated string roles = 9;
+}
+
+message UpdateUserRequest{
+    User user = 1;
+    google.protobuf.FieldMask field_mask = 2;
+}
+
+message ChangePasswordRequest {
+    string id = 1;
+    string old_password = 2;
+    string new_password = 3;
+}
+
+message ConfirmMailRequest {
+    string token = 1;
+}
+
+message ForgotPasswordRequest {
+    string username = 1;
+    string mail = 2;
+}
+
+message ResetPasswordRequest {
+    string token = 1;
+    string password = 2;
+}
+
+message Group {
+    string id = 1;
+    google.protobuf.Timestamp created_at = 2;
+    google.protobuf.Timestamp updated_at = 3;
+    string name = 4;
+    repeated string roles = 5;
+    repeated string members = 6;
+}
+
+message UpdateGroupRequest{
+    Group group = 1;
+    google.protobuf.FieldMask field_mask = 2;
+}
+
+message ListGroupsResponse {
+    repeated Group groups = 1;
+    string next_page_token = 2;
+    int32 page_size = 3;
+    int32 total_size = 4;
+}
