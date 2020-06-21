@@ -147,7 +147,6 @@ func (m *MGO) Connect() error {
 	err = m.mongoClient.Ping(ctx, readpref.Primary())
 	if err != nil {
 		return fmt.Errorf("unable to ping: %w", err)
-		return err
 	}
 	// todo: setup collections
 	m.members = m.mongoClient.Database(m.databaseName).Collection("members")
