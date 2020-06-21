@@ -112,7 +112,7 @@ func NewServer(db store.Store, messenger mailer.Messenger, opts ...func(*Server)
 	return &srv, nil
 }
 
-// Serve starts serving the gooser server.
+// Serve starts serving the club server.
 func (srv *Server) Serve() error {
 	var err error
 	if srv.listener == nil {
