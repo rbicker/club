@@ -120,7 +120,7 @@ func (srv *Server) Serve() error {
 		srv.listener, err = net.Listen("tcp", fmt.Sprintf("0.0.0.0:%s", srv.port))
 	}
 	if err != nil {
-		return fmt.Errorf("gooser server is unable to server: %w", err)
+		return fmt.Errorf("club server is unable to serve: %w", err)
 	}
 	return srv.grpcServer.Serve(srv.listener)
 }
