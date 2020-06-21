@@ -139,7 +139,7 @@ func EnableReflection() func(*Server) error {
 	}
 }
 
-// Stop stops the gooser server.
+// Stop stops the server.
 func (srv *Server) Stop() error {
 	stopped := make(chan struct{})
 	go func() {
