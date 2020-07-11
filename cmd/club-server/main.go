@@ -53,7 +53,7 @@ func main() {
 		smtpPassword, _ := os.LookupEnv("CLUB_SMTP_PASSWORD")
 		mailClient, err = mailer.NewTLSMailer(smtpHost, smtpPort, smtpUsername, smtpPassword)
 		if err != nil {
-			log.Fatalf("error while creating mail client: %s", err)
+			errorLogger.Fatalf("error while creating mail client: %s", err)
 		}
 	} else {
 		infoLogger.Println("no SMTP settings given, sending mails by logging them to stdout")
@@ -65,7 +65,7 @@ func main() {
 	gooserTarget := utils.LookupEnv("CLUB_GOOSER_TARGET", "gooser:50051")
 	mailer, err := mailer.NewMailer(mailClient, mailFrom, siteName)
 	if err != nil {
-		log.Fatalf("error while creating mailer: %s", err)
+		errorLogger.Fatalf("error while creating mailer: %s", err)
 	}
 	// init server
 	srvOpts = append(srvOpts, server.EnableReflection())
