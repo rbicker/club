@@ -47,7 +47,7 @@ func (m Mailer) Contact(name, subject, mail, content, lang string) error {
 		nil,
 	)
 	if err != nil {
-		status.Errorf(codes.Internal, printer.Sprintf("error while sending mail: %s", err))
+		return status.Errorf(codes.Internal, printer.Sprintf("error while sending mail: %s", err))
 	}
 	return nil
 }
