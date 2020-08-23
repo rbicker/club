@@ -141,9 +141,12 @@ func (srv *Server) ValidateMember(ctx context.Context, printer *message.Printer,
 
 // CreateMember creates a new member.
 func (srv *Server) CreateMember(ctx context.Context, member *clubv1.Member) (*clubv1.Member, error) {
-	printer := message.NewPrinter(language.Make(utils.LookupEnv("CLUB_DEFAULT_LANGUAGE", "en")))
 	member.Id = ""
 	member.UserId = ""
+	if _, err := language.Parse(member.GetLanguage()); err != nil {
+		return nil, status.Errorf(codes.InvalidArgument, fmt.Sprintf("invalid language '%s'", member.GetLanguage()))
+	}
+	printer := message.NewPrinter(language.Make(member.GetLanguage()))
 	if len(member.Password) < 7 {
 		return nil, status.Errorf(codes.InvalidArgument, printer.Sprintf("password must have a length of at least 7"))
 	}
