@@ -1,0 +1,316 @@
+{
+    "language": "de",
+    "messages": [
+        {
+            "id": "internal error while building filter",
+            "message": "internal error while building filter",
+            "translation": ""
+        },
+        {
+            "id": "orderBy field has a length of 0",
+            "message": "orderBy field has a length of 0",
+            "translation": ""
+        },
+        {
+            "id": "unable to search next document while creating pagination token",
+            "message": "unable to search next document while creating pagination token",
+            "translation": ""
+        },
+        {
+            "id": "invalid rsql filter string '{Filter}': {Err}",
+            "message": "invalid rsql filter string '{Filter}': {Err}",
+            "translation": "",
+            "placeholders": [
+                {
+                    "id": "Filter",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "filter"
+                },
+                {
+                    "id": "Err",
+                    "string": "%[2]s",
+                    "type": "error",
+                    "underlyingType": "interface{Error() string}",
+                    "argNum": 2,
+                    "expr": "err"
+                }
+            ]
+        },
+        {
+            "id": "{S} has a length of 0",
+            "message": "{S} has a length of 0",
+            "translation": "",
+            "placeholders": [
+                {
+                    "id": "S",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "s"
+                }
+            ]
+        },
+        {
+            "id": "invalid page token given",
+            "message": "invalid page token given",
+            "translation": ""
+        },
+        {
+            "id": "pagination filter and given filters do not match",
+            "message": "pagination filter and given filters do not match",
+            "translation": ""
+        },
+        {
+            "id": "pagination orderBy and given orderBy do not match",
+            "message": "pagination orderBy and given orderBy do not match",
+            "translation": ""
+        },
+        {
+            "id": "the request was canceled by the client",
+            "message": "the request was canceled by the client",
+            "translation": ""
+        },
+        {
+            "id": "unable to count {Name}",
+            "message": "unable to count {Name}",
+            "translation": "",
+            "placeholders": [
+                {
+                    "id": "Name",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "collection.Name()"
+                }
+            ]
+        },
+        {
+            "id": "error while querying {Name}",
+            "message": "error while querying {Name}",
+            "translation": "",
+            "placeholders": [
+                {
+                    "id": "Name",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "collection.Name()"
+                }
+            ]
+        },
+        {
+            "id": "unable to decode document",
+            "message": "unable to decode document",
+            "translation": ""
+        },
+        {
+            "id": "unable to find document",
+            "message": "unable to find document",
+            "translation": ""
+        },
+        {
+            "id": "unable to count members",
+            "message": "unable to count members",
+            "translation": ""
+        },
+        {
+            "id": "invalid id '{Id}'",
+            "message": "invalid id '{Id}'",
+            "translation": "",
+            "placeholders": [
+                {
+                    "id": "Id",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "id"
+                }
+            ]
+        },
+        {
+            "id": "error while saving",
+            "message": "error while saving",
+            "translation": ""
+        },
+        {
+            "id": "invalid id",
+            "message": "invalid id",
+            "translation": ""
+        },
+        {
+            "id": "unable to find {Name} document with id {Id}",
+            "message": "unable to find {Name} document with id {Id}",
+            "translation": "",
+            "placeholders": [
+                {
+                    "id": "Name",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "m.members.Name()"
+                },
+                {
+                    "id": "Id",
+                    "string": "%[2]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 2,
+                    "expr": "id"
+                }
+            ]
+        },
+        {
+            "id": "{Mail} is not a valid mail address",
+            "message": "{Mail} is not a valid mail address",
+            "translation": "",
+            "placeholders": [
+                {
+                    "id": "Mail",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "request.GetMail()"
+                }
+            ]
+        },
+        {
+            "id": "{Phone} is not a valid phone number",
+            "message": "{Phone} is not a valid phone number",
+            "translation": "",
+            "placeholders": [
+                {
+                    "id": "Phone",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "member.GetPhone()"
+                }
+            ]
+        },
+        {
+            "id": "invalid language '{Language}'",
+            "message": "invalid language '{Language}'",
+            "translation": "",
+            "placeholders": [
+                {
+                    "id": "Language",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "member.GetLanguage()"
+                }
+            ]
+        },
+        {
+            "id": "date of birth cannot be in the future",
+            "message": "date of birth cannot be in the future",
+            "translation": ""
+        },
+        {
+            "id": "either userId, username or mail address are already taken",
+            "message": "either userId, username or mail address are already taken",
+            "translation": ""
+        },
+        {
+            "id": "error while looking for duplicates",
+            "message": "error while looking for duplicates",
+            "translation": ""
+        },
+        {
+            "id": "password must have a length of at least 7",
+            "message": "password must have a length of at least 7",
+            "translation": ""
+        },
+        {
+            "id": "gooser connection failed",
+            "message": "gooser connection failed",
+            "translation": ""
+        },
+        {
+            "id": "permission denied",
+            "message": "permission denied",
+            "translation": ""
+        },
+        {
+            "id": "invalid field mask: {Err}",
+            "message": "invalid field mask: {Err}",
+            "translation": "",
+            "placeholders": [
+                {
+                    "id": "Err",
+                    "string": "%[1]s",
+                    "type": "error",
+                    "underlyingType": "interface{Error() string}",
+                    "argNum": 1,
+                    "expr": "err"
+                }
+            ]
+        },
+        {
+            "id": "unable to merge",
+            "message": "unable to merge",
+            "translation": ""
+        },
+        {
+            "id": "you are not allowed to change the user id",
+            "message": "you are not allowed to change the user id",
+            "translation": ""
+        },
+        {
+            "id": "password cannot be changed using the UpdateMember function, use ChangePassword instead",
+            "message": "password cannot be changed using the UpdateMember function, use ChangePassword instead",
+            "translation": ""
+        },
+        {
+            "id": "you are not allowed to change the mail address for other users",
+            "message": "you are not allowed to change the mail address for other users",
+            "translation": ""
+        },
+        {
+            "id": "error while sending mail: {Err}",
+            "message": "error while sending mail: {Err}",
+            "translation": "",
+            "placeholders": [
+                {
+                    "id": "Err",
+                    "string": "%[1]s",
+                    "type": "error",
+                    "underlyingType": "interface{Error() string}",
+                    "argNum": 1,
+                    "expr": "err"
+                }
+            ]
+        },
+        {
+            "id": "unexpected value while looking for required fields",
+            "message": "unexpected value while looking for required fields",
+            "translation": ""
+        },
+        {
+            "id": "required field(s) missing: {L}",
+            "message": "required field(s) missing: {L}",
+            "translation": "",
+            "placeholders": [
+                {
+                    "id": "L",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "l"
+                }
+            ]
+        }
+    ]
+}

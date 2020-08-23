@@ -1,0 +1,386 @@
+{
+    "language": "en",
+    "messages": [
+        {
+            "id": "internal error while building filter",
+            "message": "internal error while building filter",
+            "translation": "internal error while building filter",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "orderBy field has a length of 0",
+            "message": "orderBy field has a length of 0",
+            "translation": "orderBy field has a length of 0",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "unable to search next document while creating pagination token",
+            "message": "unable to search next document while creating pagination token",
+            "translation": "unable to search next document while creating pagination token",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "invalid rsql filter string '{Filter}': {Err}",
+            "message": "invalid rsql filter string '{Filter}': {Err}",
+            "translation": "invalid rsql filter string '{Filter}': {Err}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Filter",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "filter"
+                },
+                {
+                    "id": "Err",
+                    "string": "%[2]s",
+                    "type": "error",
+                    "underlyingType": "interface{Error() string}",
+                    "argNum": 2,
+                    "expr": "err"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "{S} has a length of 0",
+            "message": "{S} has a length of 0",
+            "translation": "{S} has a length of 0",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "S",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "s"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "invalid page token given",
+            "message": "invalid page token given",
+            "translation": "invalid page token given",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "pagination filter and given filters do not match",
+            "message": "pagination filter and given filters do not match",
+            "translation": "pagination filter and given filters do not match",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "pagination orderBy and given orderBy do not match",
+            "message": "pagination orderBy and given orderBy do not match",
+            "translation": "pagination orderBy and given orderBy do not match",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "the request was canceled by the client",
+            "message": "the request was canceled by the client",
+            "translation": "the request was canceled by the client",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "unable to count {Name}",
+            "message": "unable to count {Name}",
+            "translation": "unable to count {Name}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Name",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "collection.Name()"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "error while querying {Name}",
+            "message": "error while querying {Name}",
+            "translation": "error while querying {Name}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Name",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "collection.Name()"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "unable to decode document",
+            "message": "unable to decode document",
+            "translation": "unable to decode document",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "unable to find document",
+            "message": "unable to find document",
+            "translation": "unable to find document",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "unable to count members",
+            "message": "unable to count members",
+            "translation": "unable to count members",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "invalid id '{Id}'",
+            "message": "invalid id '{Id}'",
+            "translation": "invalid id '{Id}'",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Id",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "id"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "error while saving",
+            "message": "error while saving",
+            "translation": "error while saving",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "invalid id",
+            "message": "invalid id",
+            "translation": "invalid id",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "unable to find {Name} document with id {Id}",
+            "message": "unable to find {Name} document with id {Id}",
+            "translation": "unable to find {Name} document with id {Id}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Name",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "m.members.Name()"
+                },
+                {
+                    "id": "Id",
+                    "string": "%[2]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 2,
+                    "expr": "id"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "{Mail} is not a valid mail address",
+            "message": "{Mail} is not a valid mail address",
+            "translation": "{Mail} is not a valid mail address",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Mail",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "request.GetMail()"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "{Phone} is not a valid phone number",
+            "message": "{Phone} is not a valid phone number",
+            "translation": "{Phone} is not a valid phone number",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Phone",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "member.GetPhone()"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "invalid language '{Language}'",
+            "message": "invalid language '{Language}'",
+            "translation": "invalid language '{Language}'",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Language",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "member.GetLanguage()"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "date of birth cannot be in the future",
+            "message": "date of birth cannot be in the future",
+            "translation": "date of birth cannot be in the future",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "either userId, username or mail address are already taken",
+            "message": "either userId, username or mail address are already taken",
+            "translation": "either userId, username or mail address are already taken",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "error while looking for duplicates",
+            "message": "error while looking for duplicates",
+            "translation": "error while looking for duplicates",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "password must have a length of at least 7",
+            "message": "password must have a length of at least 7",
+            "translation": "password must have a length of at least 7",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "gooser connection failed",
+            "message": "gooser connection failed",
+            "translation": "gooser connection failed",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "permission denied",
+            "message": "permission denied",
+            "translation": "permission denied",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "invalid field mask: {Err}",
+            "message": "invalid field mask: {Err}",
+            "translation": "invalid field mask: {Err}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Err",
+                    "string": "%[1]s",
+                    "type": "error",
+                    "underlyingType": "interface{Error() string}",
+                    "argNum": 1,
+                    "expr": "err"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "unable to merge",
+            "message": "unable to merge",
+            "translation": "unable to merge",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "you are not allowed to change the user id",
+            "message": "you are not allowed to change the user id",
+            "translation": "you are not allowed to change the user id",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "password cannot be changed using the UpdateMember function, use ChangePassword instead",
+            "message": "password cannot be changed using the UpdateMember function, use ChangePassword instead",
+            "translation": "password cannot be changed using the UpdateMember function, use ChangePassword instead",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "you are not allowed to change the mail address for other users",
+            "message": "you are not allowed to change the mail address for other users",
+            "translation": "you are not allowed to change the mail address for other users",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "error while sending mail: {Err}",
+            "message": "error while sending mail: {Err}",
+            "translation": "error while sending mail: {Err}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Err",
+                    "string": "%[1]s",
+                    "type": "error",
+                    "underlyingType": "interface{Error() string}",
+                    "argNum": 1,
+                    "expr": "err"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "unexpected value while looking for required fields",
+            "message": "unexpected value while looking for required fields",
+            "translation": "unexpected value while looking for required fields",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "required field(s) missing: {L}",
+            "message": "required field(s) missing: {L}",
+            "translation": "required field(s) missing: {L}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "L",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "l"
+                }
+            ],
+            "fuzzy": true
+        }
+    ]
+}
