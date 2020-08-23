@@ -1,3 +1,3 @@
 #!/bin/sh
 
-docker build -t club:latest .
+docker build -t rbicker/club:latest .
