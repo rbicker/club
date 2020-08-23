@@ -8,3 +8,17 @@ import mock "github.com/stretchr/testify/mock"
 type Messenger struct {
 	mock.Mock
 }
+
+// Contact provides a mock function with given fields: name, subject, mail, content, lang
+func (_m *Messenger) Contact(name string, subject string, mail string, content string, lang string) error {
+	ret := _m.Called(name, subject, mail, content, lang)
+
+	var r0 error
+	if rf, ok := ret.Get(0).(func(string, string, string, string, string) error); ok {
+		r0 = rf(name, subject, mail, content, lang)
+	} else {
+		r0 = ret.Error(0)
+	}
+
+	return r0
+}

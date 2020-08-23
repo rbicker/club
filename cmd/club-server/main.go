@@ -44,7 +44,7 @@ func main() {
 		errorLogger.Fatalf("unable to connect to mongodb: %s", err)
 	}
 	infoLogger.Println("connected to mongodb")
-	// mailer
+	// messenger
 	var mailClient mailer.MailClient
 	smtpHost, ok := os.LookupEnv("CLUB_SMTP_HOST")
 	if ok {
@@ -60,12 +60,13 @@ func main() {
 		infoLogger.Println("to send real mails, have a look at the CLUB_SMTP_* environment variables")
 		mailClient = mailer.NewLogMailer(infoLogger)
 	}
-	mailFrom, _ := os.LookupEnv("CLUB_MAIL_FROM")
-	siteName := utils.LookupEnv("CLUB_SITE_NAME", "gooser")
+	mailFrom := os.Getenv("CLUB_MAIL_FROM")
+	contactTo := utils.LookupEnv("CLUB_CONTACT_TO", mailFrom)
+	siteName := utils.LookupEnv("CLUB_SITE_NAME", "club")
 	gooserTarget := utils.LookupEnv("CLUB_GOOSER_TARGET", "gooser:50051")
-	mailer, err := mailer.NewMailer(mailClient, mailFrom, siteName)
+	messenger, err := mailer.NewMailer(mailClient, mailFrom, siteName, contactTo)
 	if err != nil {
-		errorLogger.Fatalf("error while creating mailer: %s", err)
+		errorLogger.Fatalf("error while creating messenger: %s", err)
 	}
 	// init server
 	srvOpts = append(srvOpts, server.EnableReflection())
@@ -74,7 +75,7 @@ func main() {
 	srvOpts = append(srvOpts, server.WithGooserTarget(gooserTarget))
 	p := utils.LookupEnv("CLUB_PORT", "50051")
 	srvOpts = append(srvOpts, server.WithPort(p))
-	srv, err := server.NewServer(db, mailer, srvOpts...)
+	srv, err := server.NewServer(db, messenger, srvOpts...)
 	if err != nil {
 		errorLogger.Fatalf("unable to create new gooser server: %s", err)
 	}

@@ -16,6 +16,7 @@ import * as google_protobuf_timestamp_pb from 'google-protobuf/google/protobuf/t
 import {
   ChangePasswordRequest,
   ConfirmMailRequest,
+  ContactRequest,
   ForgotPasswordRequest,
   Group,
   IdRequest,
@@ -44,6 +45,28 @@ export class ClubClient {
     this.hostname_ = hostname;
     this.credentials_ = credentials;
     this.options_ = options;
+  }
+
+  methodInfoContact = new grpcWeb.AbstractClientBase.MethodInfo(
+    google_protobuf_empty_pb.Empty,
+    (request: ContactRequest) => {
+      return request.serializeBinary();
+    },
+    google_protobuf_empty_pb.Empty.deserializeBinary
+  );
+
+  contact(
+    request: ContactRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback: (err: grpcWeb.Error,
+               response: google_protobuf_empty_pb.Empty) => void) {
+    return this.client_.rpcCall(
+      this.hostname_ +
+        '/club.v1.Club/Contact',
+      request,
+      metadata || {},
+      this.methodInfoContact,
+      callback);
   }
 
   methodInfoListMembers = new grpcWeb.AbstractClientBase.MethodInfo(

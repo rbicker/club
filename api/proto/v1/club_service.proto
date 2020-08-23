@@ -11,6 +11,8 @@ import "google/protobuf/timestamp.proto";
 
 // Club is a simple api for running a club.
 service Club {
+    // Send a message.
+    rpc Contact(ContactRequest) returns (google.protobuf.Empty) {}
     // members
     // List members.
     rpc ListMembers(ListRequest) returns (ListMembersResponse){}
@@ -54,6 +56,14 @@ message ListRequest{
     string page_token = 2;
     string filter = 3;
     string order_by = 4;
+}
+
+message ContactRequest{
+    string name = 1;
+    string mail = 2;
+    string subject = 3;
+    string message = 4;
+    string language = 5;
 }
 
 message Member{

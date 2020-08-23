@@ -52,6 +52,40 @@ export namespace ListRequest {
   }
 }
 
+export class ContactRequest extends jspb.Message {
+  getName(): string;
+  setName(value: string): void;
+
+  getMail(): string;
+  setMail(value: string): void;
+
+  getSubject(): string;
+  setSubject(value: string): void;
+
+  getMessage(): string;
+  setMessage(value: string): void;
+
+  getLanguage(): string;
+  setLanguage(value: string): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): ContactRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: ContactRequest): ContactRequest.AsObject;
+  static serializeBinaryToWriter(message: ContactRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): ContactRequest;
+  static deserializeBinaryFromReader(message: ContactRequest, reader: jspb.BinaryReader): ContactRequest;
+}
+
+export namespace ContactRequest {
+  export type AsObject = {
+    name: string,
+    mail: string,
+    subject: string,
+    message: string,
+    language: string,
+  }
+}
+
 export class Member extends jspb.Message {
   getId(): string;
   setId(value: string): void;
