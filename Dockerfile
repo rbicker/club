@@ -1,6 +1,6 @@
 # builder
 FROM golang:alpine AS builder
-RUN apk update && apk add --no-cache git tzdata
+RUN apk update && apk add --no-cache git tzdata ca-certificates
 ENV USER=appuser
 ENV UID=10001
 RUN adduser \
@@ -27,6 +27,8 @@ COPY --from=builder /etc/group /etc/group
 COPY --from=builder /go/bin/club-server /club-server
 # for working with timezones
 COPY --from=builder /usr/share/zoneinfo  /usr/share/zoneinfo
+# to have valid ca certs
+COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 USER appuser:appuser
 EXPOSE 50051
 ENTRYPOINT ["/club-server"]
